@@ -1,17 +1,13 @@
 ---
 title: Publishing eDNA data through GBIF-US \& OBIS-USA
-date: 2024-04-17
-subtitle: presented as a NOAA Omics Seminar
+footer: presented as a NOAA Omics Seminar 2024-04-17
 author: 
   - name: Stephen Formel
     orcid: 0000-0001-7418-1244
     email: sformel@usgs.gov
     affiliations: 
-      - name: U.S. Geological Survey
         department: Science Analytics and Synthesis (SAS)
         group: Biogeographic Science Branch
-      - name: GBIF-US
-      - name: OBIS-USA
 license: "CC BY"
 format: 
   revealjs:

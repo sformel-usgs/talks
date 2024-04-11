@@ -1,10 +1,15 @@
 #title-slide .quarto-title-author-name {
-  font-size: 80px!important;
+  font-size: 50px!important;
 }
-#title-slide .quarto-title-author-name:after {
-  content: url('../images/USGS_ID_green.png') ;
-  display: block;
 
+#title-slide .quarto-title-author:after {
+   content: ' ';
+   background: url(../images/USGS_ID_green.png) no-repeat;
+   background-size:contain;
+   height: 200px;
+   width: 200px;
+   display: inline-block;
+  
   /***
     display: block;
     content: "";
