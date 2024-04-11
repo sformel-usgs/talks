@@ -91,9 +91,18 @@ execute:
 :::
 :::
 
-## What are GBIF and OBIS?
+## What are GBIF and OBIS 1?
 
-{{< iconify exploding-head >}} 
+| Shortcode                                                                              | Icon                                                                   |
+| -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| `{{{< iconify exploding-head >}}}`                                                     | {{< iconify exploding-head >}}                                         |
+| `{{{< iconify exploding-head size=2xl >}}}`                                            | {{< iconify exploding-head size=2xl >}}                                |
+| `{{{< iconify exploding-head size=5x rotate=180deg >}}}`                               | {{< iconify exploding-head size=5x rotate=180deg >}}                   |
+| `{{{< iconify exploding-head size=Huge >}}}`                                           | {{< iconify exploding-head size=Huge >}}                               |
+| `{{{< iconify fluent-emoji-high-contrast 1st-place-medal >}}}`                         | {{< iconify fluent-emoji-high-contrast 1st-place-medal >}}             |
+| `{{{< iconify twemoji 1st-place-medal >}}}`                                            | {{< iconify twemoji 1st-place-medal >}}                                |
+| `{{{< iconify line-md loading-alt-loop >}}}`                                           | {{< iconify line-md loading-alt-loop >}}                               |
+| `{{{< iconify fa6-brands apple width=50px height=10px rotate=90deg flip=vertical >}}}` | {{< iconify fa6-brands apple width=50px rotate=90deg flip=vertical >}} |
 
 GBIF and OBIS are international initiatives that aim to provide open access to biodiversity occurrence data.
 
