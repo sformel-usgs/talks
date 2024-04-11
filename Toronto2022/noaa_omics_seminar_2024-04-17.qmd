@@ -90,3 +90,101 @@ execute:
 +---------------------------------------------------------------------------------------------------------------------------------------+------------+-----------------------------------------------------------------+
 :::
 :::
+
+## What are GBIF and OBIS?
+
+{{< iconify exploding-head >}} 
+
+GBIF and OBIS are international initiatives that aim to provide open access to biodiversity occurrence data.
+
+Although they are most well-known for their publishing platforms, and their role as data aggregators...
+
+...both initiatives represent an investment from the international political community and a vibrant scientific community of nodes, publishers, and users of standards and practices.
+
+
+## What are GBIF and OBIS?
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+# Generate data holdings stats
+
+library(dplyr)
+library(httr2)
+
+options(scipen=999)
+
+# GBIF Stats
+gbif_occ_ct <- rgbif::occ_count() %>% 
+  scales::comma()
+
+gbif_dataset_ct <- httr2::request(base_url = "https://api.gbif.org/v1/dataset/search?limit=0") %>% 
+  req_perform() %>% 
+  resp_body_json() %>% 
+  .[["count"]] %>% 
+  scales::comma()
+
+gbif_publisher_ct <- httr2::request(base_url = "https://api.gbif.org/v1/organization?limit=0&isEndorsed=true") %>% 
+  req_perform() %>% 
+  resp_body_json() %>% 
+  .[["count"]] %>% 
+  scales::comma()
+
+gbif_paper_ct <- httr2::request(base_url = "https://api.gbif.org/v1/literature/search?contentType=literature&literatureType=journal&relevance=GBIF_USED&peerReview=true&limit=0") %>% 
+  req_perform() %>% 
+  resp_body_json() %>% 
+  .[["count"]] %>% 
+  scales::comma()
+
+# OBIS Stats
+stats <- httr2::request(base_url = "https://api.obis.org/statistics") %>% 
+  req_perform() %>% 
+  resp_body_json()
+
+obis_occ_ct <-  stats %>% 
+  .[["records"]] %>% 
+  scales::comma()
+
+obis_dataset_ct <- stats %>% 
+  .[["datasets"]] %>% 
+  scales::comma()
+
+obis_taxa_ct <- stats %>% 
+  .[["species"]] %>% 
+  scales::comma()
+
+```
+
+::: {style="font-size: 75%; text-align: center"}
+:::: {.columns .v-center-container}
+
+::: {.column width="50%"}
+![](images/GBIF-Full-logo/PNG/gbif-full-logo-green - whitespace_cropped.png){fig-alt="GBIF Logo" fig-align="center"}
+Occurrence Records: `r gbif_occ_ct`
+
+Datasets: `r gbif_dataset_ct`
+
+Publishers: `r gbif_publisher_ct`
+
+Papers: `r gbif_paper_ct`
+
+:::
+
+::: {.column width="50%"}
+
+
+![](images/logoOBIS_namechange_horizontal.png){fig-alt="OBIS Logo" fig-align="center"}
+
+Occurrence Records: `r obis_occ_ct`
+
+Datasets: `r obis_dataset_ct`
+
+Taxa: `r obis_taxa_ct`
+
+:::
+
+:::
+
+:::

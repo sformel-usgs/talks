@@ -495,8 +495,37 @@ Stephen Formel <a href="https://orcid.org/0000-0001-7418-1244" class="quarto-tit
 </div>
 </div>
 </div>
-
-<img src="images/USGS_ID_green.png" class="slide-logo r-stretch"><div class="footer footer-default">
+</section>
+<section id="what-are-gbif-and-obis" class="slide level2">
+<h2>What are GBIF and OBIS?</h2>
+<p></p>
+<p>GBIF and OBIS are international initiatives that aim to provide open access to biodiversity occurrence data.</p>
+<p>Although they are most well-known for their publishing platforms, and their role as data aggregators…</p>
+<p>…both initiatives represent an investment from the international political community and a vibrant scientific community of nodes, publishers, and users of standards and practices.</p>
+</section>
+<section id="what-are-gbif-and-obis-1" class="slide level2">
+<h2>What are GBIF and OBIS?</h2>
+<div style="font-size: 75%; text-align: center">
+<div class="columns v-center-container">
+<div class="column" style="width:50%;">
+<p><img data-src="images/GBIF-Full-logo/PNG/gbif-full-logo-green%20-%20whitespace_cropped.png" data-fig-align="center" alt="GBIF Logo"> Occurrence Records: 2,689,271,139</p>
+<p>Datasets: 104,049</p>
+<p>Publishers: 2,720</p>
+<p>Papers: 10,371</p>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/logoOBIS_namechange_horizontal.png" alt="OBIS Logo"></p>
+</figure>
+</div>
+<p>Occurrence Records: 126,818,624</p>
+<p>Datasets: 4,852</p>
+<p>Taxa: 149,319</p>
+</div>
+</div>
+</div>
+<p><img src="images/USGS_ID_green.png" class="slide-logo"></p>
+<div class="footer footer-default">
 <p>presented as a NOAA Omics Seminar 2024-04-17</p>
 </div>
 </section>
@@ -714,6 +743,44 @@ Stephen Formel <a href="https://orcid.org/0000-0001-7418-1244" class="quarto-tit
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
