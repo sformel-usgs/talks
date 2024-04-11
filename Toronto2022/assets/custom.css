@@ -2,6 +2,16 @@
   font-size: 50px!important;
 }
 
+#title-slide .quarto-title-author-email:after {
+  content: '';
+  display: block;
+  height: 20px;
+}
+
+#title-slide .quarto-title-affiliation {
+  font-size: 20px!important;
+}
+
 #title-slide .quarto-title-author:after {
    content: ' ';
    background: url(../images/USGS_ID_green.png) no-repeat;
