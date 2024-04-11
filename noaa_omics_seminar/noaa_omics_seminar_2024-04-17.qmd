@@ -91,25 +91,41 @@ execute:
 :::
 :::
 
-## What are GBIF and OBIS 1?
+## What are GBIF and OBIS?
 
-| Shortcode                                                                              | Icon                                                                   |
-| -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| `{{{< iconify exploding-head >}}}`                                                     | {{< iconify exploding-head >}}                                         |
-| `{{{< iconify exploding-head size=2xl >}}}`                                            | {{< iconify exploding-head size=2xl >}}                                |
-| `{{{< iconify exploding-head size=5x rotate=180deg >}}}`                               | {{< iconify exploding-head size=5x rotate=180deg >}}                   |
-| `{{{< iconify exploding-head size=Huge >}}}`                                           | {{< iconify exploding-head size=Huge >}}                               |
-| `{{{< iconify fluent-emoji-high-contrast 1st-place-medal >}}}`                         | {{< iconify fluent-emoji-high-contrast 1st-place-medal >}}             |
-| `{{{< iconify twemoji 1st-place-medal >}}}`                                            | {{< iconify twemoji 1st-place-medal >}}                                |
-| `{{{< iconify line-md loading-alt-loop >}}}`                                           | {{< iconify line-md loading-alt-loop >}}                               |
-| `{{{< iconify fa6-brands apple width=50px height=10px rotate=90deg flip=vertical >}}}` | {{< iconify fa6-brands apple width=50px rotate=90deg flip=vertical >}} |
+:::: {.columns .v-center-container}
+
+::: {.column width="10%"}
+
+{{< iconify icon-park international size=3x >}}
+
+<br>
+
+{{< iconify gala data size=3x >}}
+
+<br>
+
+{{< iconify pepicons-print people-circle size=3x >}}
+
+
+
+:::
+
+::: {.column width="90%"}
 
 GBIF and OBIS are international initiatives that aim to provide open access to biodiversity occurrence data.
 
+<br>
+
 Although they are most well-known for their publishing platforms, and their role as data aggregators...
 
-...both initiatives represent an investment from the international political community and a vibrant scientific community of nodes, publishers, and users of standards and practices.
+<br>
 
+...both initiatives represent an investment from the international political community and a vibrant scientific community  of nodes, publishers, and users of standards and practices.
+
+:::
+
+:::
 
 ## What are GBIF and OBIS?
 
