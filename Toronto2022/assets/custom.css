@@ -1,8 +1,8 @@
-#title-slide .author {
+#title-slide .quarto-title-author-name {
   font-size: 80px!important;
 }
-#title-slide .author:after {
-  content: url('../images/monash-stacked-blue-rgb.png') ;
+#title-slide .quarto-title-author-name:after {
+  content: url('../images/USGS_ID_green.png') ;
   display: block;
 
   /***

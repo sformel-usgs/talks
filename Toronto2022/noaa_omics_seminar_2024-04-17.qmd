@@ -1,0 +1,55 @@
+---
+title: Publishing eDNA data through GBIF-US \& OBIS-USA
+date: 2024-04-17
+subtitle: presented as a NOAA Omics Seminar
+author: 
+  - name: Stephen Formel
+    orcid: 0000-0001-7418-1244
+    email: sformel@usgs.gov
+    affiliations: 
+      - name: U.S. Geological Survey
+        department: Science Analytics and Synthesis (SAS)
+        group: Biogeographic Science Branch
+      - name: GBIF-US
+      - name: OBIS-USA
+license: "CC BY"
+format: 
+  revealjs:
+    #incremental: true
+    logo: images/USGS_ID_green.png
+    #footer: "`emitanaka.org/slides/toronto2022`"
+    slide-number: true
+    multiplex: true
+    theme: [simple, assets/monash.scss]
+    show-slide-number: all
+    controls: true
+    width: 1280
+    height: 720
+    css: [assets/syntax-highlight.css, assets/custom.css, assets/pacman.css]
+    header-includes: |
+      <link rel="stylesheet" href="/assets/fontawesome-free-6.1.1-web/css/font-awesome.min.css">
+      <script defer src="/assets/fontawesome-free-6.1.1-web/js/all.min.js"></script>
+execute:
+  echo: true
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
