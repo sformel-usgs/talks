@@ -16,7 +16,7 @@ format:
     footer: presented as a NOAA Omics Seminar 2024-04-17
     slide-number: true
     multiplex: true
-    theme: [simple, assets/monash.scss]
+    theme: [simple, assets/formel.scss]
     show-slide-number: all
     controls: true
     width: 1280
@@ -26,7 +26,9 @@ format:
       <link rel="stylesheet" href="/assets/fontawesome-free-6.1.1-web/css/font-awesome.min.css">
       <script defer src="/assets/fontawesome-free-6.1.1-web/js/all.min.js"></script>
 execute:
-  echo: true
+  echo: false
+  message: false
+  warning: false
 ---
 
 ::: callout-tip
@@ -67,27 +69,18 @@ execute:
 ## Example DNA-Derived Datasets
 
 ::: {style="font-size: 75%;"}
-+---------------------------------------------------------------------------------------------------------------------------------------+------------+-----------------------------------------------------------------+
-| Title                                                                                                                                 | Platform   | Link                                                            |
-+---------------------------------------------------------------------------------------------------------------------------------------+------------+-----------------------------------------------------------------+
-| eDNA from Gulf of Mexico Ecosystems and Carbon Cruise 2021 (GOMECC-4)                                                                 | OBIS       | <https://obis.org/dataset/210efc7c-4762-47ee-b4b5-22a0f436ef44> |
-+---------------------------------------------------------------------------------------------------------------------------------------+------------+-----------------------------------------------------------------+
-|                                                                                                                                       | GBIF       | <https://doi.org/10.15468/sm6fpz>                               |
-+---------------------------------------------------------------------------------------------------------------------------------------+------------+-----------------------------------------------------------------+
-| 18S Monterey Bay Time Series: an eDNA data set from Monterey Bay, California, including years 2006, 2013 - 2016                       | OBIS       | <https://obis.org/dataset/62b97724-da17-4ca7-9b26-b2a22aeaab51> |
-+---------------------------------------------------------------------------------------------------------------------------------------+------------+-----------------------------------------------------------------+
-|                                                                                                                                       | GBIF       | <https://doi.org/10.15468/84ntea>                               |
-+---------------------------------------------------------------------------------------------------------------------------------------+------------+-----------------------------------------------------------------+
-| COI data from: Environmental DNA metabarcoding differentiates between micro-habitats within the rocky intertidal (Shea & Boehm, 2024) | OBIS       | <https://obis.org/dataset/54bc0e9c-e857-4216-a6ce-46cd6ae58cd7> |
-+---------------------------------------------------------------------------------------------------------------------------------------+------------+-----------------------------------------------------------------+
-|                                                                                                                                       | GBIF       | <https://doi.org/10.15468/33artc>                               |
-+---------------------------------------------------------------------------------------------------------------------------------------+------------+-----------------------------------------------------------------+
-| eDNA observations, concurrent with trawl survey, of marine fish in coastal New Jersey, USA 2019                                       | OBIS       | <https://obis.org/dataset/fe2ed263-2b21-47d7-a79f-f9b911132398> |
-+---------------------------------------------------------------------------------------------------------------------------------------+------------+-----------------------------------------------------------------+
-|                                                                                                                                       | GBIF       | <https://doi.org/10.15468/zsrtyb>                               |
-+---------------------------------------------------------------------------------------------------------------------------------------+------------+-----------------------------------------------------------------+
-| Kenai National Wildlife Refuge Aquatic Invasive Fish Surveys                                                                          | GBIF       | <https://doi.org/10.15468/kzw2j5>                               |
-+---------------------------------------------------------------------------------------------------------------------------------------+------------+-----------------------------------------------------------------+
+|                                                                                                                                       |          |                                                                 |
+|---------------------------------------------------------------------------------------------------------------------------------------|----------|-----------------------------------------------------------------|
+| Title                                                                                                                                 | Platform | Link                                                            |
+| eDNA from Gulf of Mexico Ecosystems and Carbon Cruise 2021 (GOMECC-4)                                                                 | OBIS     | <https://obis.org/dataset/210efc7c-4762-47ee-b4b5-22a0f436ef44> |
+|                                                                                                                                       | GBIF     | <https://doi.org/10.15468/sm6fpz>                               |
+| 18S Monterey Bay Time Series: an eDNA data set from Monterey Bay, California, including years 2006, 2013 - 2016                       | OBIS     | <https://obis.org/dataset/62b97724-da17-4ca7-9b26-b2a22aeaab51> |
+|                                                                                                                                       | GBIF     | <https://doi.org/10.15468/84ntea>                               |
+| COI data from: Environmental DNA metabarcoding differentiates between micro-habitats within the rocky intertidal (Shea & Boehm, 2024) | OBIS     | <https://obis.org/dataset/54bc0e9c-e857-4216-a6ce-46cd6ae58cd7> |
+|                                                                                                                                       | GBIF     | <https://doi.org/10.15468/33artc>                               |
+| eDNA observations, concurrent with trawl survey, of marine fish in coastal New Jersey, USA 2019                                       | OBIS     | <https://obis.org/dataset/fe2ed263-2b21-47d7-a79f-f9b911132398> |
+|                                                                                                                                       | GBIF     | <https://doi.org/10.15468/zsrtyb>                               |
+| Kenai National Wildlife Refuge Aquatic Invasive Fish Surveys                                                                          | GBIF     | <https://doi.org/10.15468/kzw2j5>                               |
 :::
 :::
 
@@ -122,9 +115,6 @@ Although they are most well-known for their publishing platforms, and their role
 ## What are GBIF and OBIS?
 
 ```{r}
-#| echo: false
-#| message: false
-#| warning: false
 
 # Generate data holdings stats
 
@@ -205,9 +195,6 @@ Map of the GBIF and OBIS networks. Countries where there is at least one GBIF no
 :::
 
 ```{r}
-#| echo: false
-#| message: false
-#| warning: false
 #| fig-align: center
 #| out-width: "100%"
 #| fig-alt: Map of the GBIF and OBIS networks.  Countries where there is at least one GBIF node are in blue.  Yellow points represent OBIS nodes.
@@ -262,103 +249,410 @@ USGS-SAS Biogeographic Science Branch manages the US nodes: GBIF-US and OBIS-USA
 
 ## Why do we work with GBIF and OBIS?
 
-::: {.callout-note appearance="simple" icon=false}
-
+::: {.callout-note appearance="simple" icon="false"}
 ::: {.columns .v-center-container}
-
 ::: {.column width="50%"}
-
-![*Sparkly fountains need robust plumbing systems. <br>- Terry McConnell \(International Digital Twins of the Ocean Summit 2022\)*](images/67725_image_access_800/1_06_10_022012_image_access_800.jpg){fig-alt="https://ark.digitalcommonwealth.org/ark:/50959/r781wg156" height=300}
+![*Sparkly fountains need robust plumbing systems.* <br>- Terry McConnell (International Digital Twins of the Ocean Summit 2022)](images/67725_image_access_800/1_06_10_022012_image_access_800.jpg){fig-alt="https://ark.digitalcommonwealth.org/ark:/50959/r781wg156" height="300"}
 :::
 
 ::: {.column width="50%"}
-
-The US has been a voting participant in GBIF since 2001 and became an OBIS-USA node in 2005. 
+The US has been a voting participant in GBIF since 2001 and became an OBIS-USA node in 2005.
 
 <br>
 
 The USGS is shepherding over two decades of investment in the robust plumbing needed for national and global biodiversity science and data.
-
 :::
-
 :::
-
 :::
 
 ## How are GBIF and OBIS the same?
 
-::: {.callout-note appearance="simple" icon=false}
-
-::: {.columns}
+::: {.callout-note appearance="simple" icon="false"}
+::: columns
 ::: {.column width="10%"}
-
 {{< iconify openmoji whale size=3x >}}
-
 :::
 
 ::: {.column width="90%"}
-
-Both are active and energetic communities that develop, maintain, and promote standards and practices for biodiversity science and have been doing so for > 20 years
-
+Both are active and energetic communities that develop, maintain, and promote standards and practices for biodiversity science and have been doing so for \> 20 years
+:::
+:::
 :::
 
-:::
-
-:::
-
-::: {.callout-note appearance="simple" icon=false}
-
-::: {.columns}
+::: {.callout-note appearance="simple" icon="false"}
+::: columns
 ::: {.column width="10%"}
-
 {{< iconify openmoji unlocked size=3x >}}
-
 :::
 
 ::: {.column width="90%"}
-
 Both promote open data and science, and publish massive amounts of standardized biological observations through their platforms
-
+:::
+:::
 :::
 
-:::
-
-:::
-
-::: {.callout-note appearance="simple" icon=false}
-
-::: {.columns}
+::: {.callout-note appearance="simple" icon="false"}
+::: columns
 ::: {.column width="10%"}
-
 {{< iconify openmoji handshake-medium-dark-skin-tone-medium-skin-tone size=3x >}}
-
 :::
 
 ::: {.column width="90%"}
-
-Have signed a [letter of agreement](https://www.gbif.org/news/6M8YYYirX3bK57bHaIpd0U/ocean-biodiversity-information-system-and-gbif-update-and-expand-cooperation-agreement) in recognition that their respective communities will benefit from more streamlined ways of working together.  A stronger action plan is forthcoming.
-
+Have signed a [letter of agreement](https://www.gbif.org/news/6M8YYYirX3bK57bHaIpd0U/ocean-biodiversity-information-system-and-gbif-update-and-expand-cooperation-agreement) in recognition that their respective communities will benefit from more streamlined ways of working together. A stronger action plan is forthcoming.
+:::
+:::
 :::
 
-:::
-
-:::
-
-::: {.callout-note appearance="simple" icon=false}
-
-::: {.columns}
+::: {.callout-note appearance="simple" icon="false"}
+::: columns
 ::: {.column width="10%"}
-
 {{< iconify openmoji clipboard size=3x >}}
-
 :::
 
 ::: {.column width="90%"}
-
 GBIF and OBIS are built on the same data and metadata standards, and share open-source tools
+:::
+:::
+:::
+
+## Important Differences
+
+::: {.callout-note appearance="simple" icon="false"}
+::: columns
+::: {.column width="10%"}
+{{< iconify openmoji jellyfish size=3x >}}
+:::
+
+::: {.column width="90%"}
+GBIF has a global scope. OBIS includes marine occurrences only.
+:::
+:::
+:::
+
+::: {.callout-note appearance="simple" icon="false"}
+::: columns
+::: {.column width="10%"}
+{{< iconify openmoji money-bag size=3x >}}
+:::
+
+::: {.column width="90%"}
+GBIF is funded by individual participant countries. We fund GBIF-US through the NSF. OBIS is funded by UNESCO, an agency of the United Nations.
+:::
+:::
+:::
+
+::: {.callout-note appearance="simple" icon="false"}
+::: columns
+::: {.column width="10%"}
+{{< iconify openmoji yin-yang size=3x >}}
+:::
+
+::: {.column width="90%"}
+GBIF-US and OBIS-USA are unusual in that both nodes are managed by the same people.
+:::
+:::
+:::
+
+## How does it work?
+
+![](/images/gbif_workflow.png)
+
+::: {style="font-size: 75%; text-align: left"}
+This is an illustration of the GBIF workflow. The OBIS workflow is similar.
+:::
+
+## What do GBIF and OBIS do well?
+
+-   Coordinate and serve interoperable observations of biological occurrence
+-   Promote and catalyze progress for open science and FAIR data
+-   Searching data at the occurrence level
+-   Track data use and [citations](https://www.gbif.org/literature-tracking)
+-   Well designed tools and guidance exist for self-publishing
+-   Active and diverse community
+
+## So, why use GBIF and OBIS?
+
+Off-the-shelf platforms for publishing and tracking use of biological occurrence data with minimal financial or staffing investment. USGS, and SpringerNature, accept GBIF as an archival repository, publishing to OBIS-USA satisfies NOAA archiving requirements.
+
+![](images/mountain_of_FAIR.png)
+
+## Sustainablity - International
+
+::: {.callout-note appearance="simple" icon="false"}
+Both organizations rely on regular international investment for funding.
+:::
+
+::: {.callout-note appearance="simple" icon="false"}
+OBIS recently transitioned from a project to a program, which means it now receives core UNESCO/IOC funding and staff support to enable the activity to operate on a permanent basis.
+:::
+
+::: {.callout-note appearance="simple" icon="false"}
+Open standards and science means that migration of data would be relatively simple in the event of a surprise shutdown.
+:::
+
+## Sustainablity - US
+
+::: {.callout-note appearance="simple" icon="false"}
+GBIF-US is funded by NSF (\~ \$600k / year). There is a \[US Delegation\](https://www.gbif.us/community/) that guides GBIF for US interests.
+
+OBIS-USA is funded through US participation in UN and UNESCO.
+
+For operation of both nodes, USGS funds the node staff salary + travel. NOAA IOOS also contributes staff.
+:::
+
+::: {.callout-note appearance="simple" icon="false"}
+Both IPTs could easily transition to other management and continue to operate without US funding
+:::
+
+::: {.callout-note appearance="simple" icon="false"}
+Both secretariats have funding and training in place for new nodes and node managers
+:::
+
+## Things in Development
+
+-   Taxonomic alignment
+
+-   Facilitating round tripping of data, taxonomic updates
+
+-   Sequence searches
+
+-   [eDNA publishing tools](https://edna-tool.gbif-uat.org/) for non-technical / small-to-medium publishers
+
+-   Expansion of US node staff
+
+
+# Publishing eDNA Data
+
+# The DNADerivedData extension {.smaller}
+
+The [DNADerivedData extension](https://rs.gbif.org/extension/gbif/1.0/dna_derived_data_2022-02-23.xml) was created to extend occurrence data with sequencing related metadata. 
+
+It mostly consists of terms from the GGBN Data Standard, GSC MIxS (Minimum Information about any (X) Sequence), and MIQE (The Minimum Information for Publication of Quantitative Real-Time PCR Experiments). <br>
+
+Guidelines for using the extension and publishing DNA-derived data in general are available at [Publishing DNA-derived data through biodiversity data platforms](https://docs.gbif.org/publishing-dna-derived-data/en/). The guide handles metabarcoding and metagenomics, which are sequence derived, and qPCR/ddPCR data which are not sequence derived.
+
+![](images/dna_guide.png){fig-align="center"}
+
+## DNA-Derived Data
+
+![https://docs.gbif.org/publishing-dna-derived-data/img/web/sampling-processes.en.svg](https://docs.gbif.org/publishing-dna-derived-data/img/web/sampling-processes.en.svg)
+
+## The Darwin Core Archive (DwC-A)
+
+![https://manual.obis.org/images/dwca.png](https://manual.obis.org/images/dwca.png)
+
+```{mermaid}
+
+flowchart LR
+    DwC-A
+    subgraph tables
+    Core([Occurrence Core])
+    Ext([DNA Derived Data Extension]) --> Core
+    end
+    MD([Ecological Metadata Language])
+
+  
+  
+```
 
 :::
 
+## Processing workflow
+
+![](https://docs.gbif.org/publishing-dna-derived-data/img/web/outline-of-bioinformatic-processing.en.svg) From https://docs.gbif.org/publishing-dna-derived-data/en/
+
+## Data mapping
+
+See [Mapping (meta)barcoding data](https://docs.gbif.org/publishing-dna-derived-data/en/#mapping-metabarcoding-edna-and-barcoding-data) and [Mapping qPCR/ddPCR data](https://docs.gbif.org/publishing-dna-derived-data/en/#mapping-ddpcr-qpcr-data).
+
+## OBIS specificities {.smaller}
+
+**Unclassified sequences** For OBIS we recommend that unclassified sequences are annotated as `scientificName` = `incertae sedis` and `scientificNameID` = `urn:lsid:marinespecies.org:taxname:12`. This will ensure correct interpretation by both GBIF and OBIS.
+
+Additionally, it is recommended that sequence identifiers from the used reference databases (e.g. Barcode index numbers: BINs from BOLD) be added in the `taxonConceptID` field of the occurrence core table. In this way OBIS will retain its taxonomic backbone based on WoRMS, while enabling linking to disparate reference sequence databases. Names from reference databases which are not strictly scientific names, can be added as verbatimIdentification.
+
+## Examples from [Silliman et al., 2023](https://obis.org/dataset/210efc7c-4762-47ee-b4b5-22a0f436ef44)
+
+::: {layout-ncol="2"}
+[![](images/silliman_gbif_landing_page.PNG){fig-alt="GBIF Landing Page" width="400"}](https://www.gbif.org/dataset/9012def0-bd87-48a0-ac9e-e0e78dd37689)
+
+[![](images/silliman_obis_landing_page.PNG){fig-alt="OBIS Landing Page" width="400"}](https://obis.org/dataset/210efc7c-4762-47ee-b4b5-22a0f436ef44)
+
+[![](images/qrcode_www.gbif.org.png){width="150"}](https://www.gbif.org/dataset/9012def0-bd87-48a0-ac9e-e0e78dd37689)
+
+[![](images/qrcode_obis.org.png){width="150"}](https://obis.org/dataset/210efc7c-4762-47ee-b4b5-22a0f436ef44)
 :::
 
+## Examples of DwC Terms
+
+::: {style="font-size: 50%; text-align: left"}
+```{r}
+#| label: tbl-basics
+#| tbl-cap: Example Occurrence Data From [Silliman et al., 2023](https://obis.org/dataset/210efc7c-4762-47ee-b4b5-22a0f436ef44)
+
+#Make table of Gomecc data
+
+#make rds from download
+#df <- robis::occurrence(datasetid = "210efc7c-4762-47ee-b4b5-22a0f436ef44", extensions = "DNADerivedData")
+#saveRDS(df, file = "obis_210efc7c-4762-47ee-b4b5-22a0f436ef44.rds")
+
+df <- readRDS("obis_210efc7c-4762-47ee-b4b5-22a0f436ef44.rds")
+
+occ <- df %>% 
+  group_by(scientificNameID) %>% 
+  slice(2) %>% 
+  filter(scientificNameID %in% c("urn:lsid:marinespecies.org:taxname:233015")) %>% 
+  ungroup() %>% 
+  select(occurrenceID,
+         eventDate,
+         locality,
+         locationID,
+         decimalLatitude,
+         decimalLongitude,
+         geodeticDatum,
+         minimumDepthInMeters,
+         maximumDepthInMeters) %>% 
+  tidyr::gather(key = "Term", value = "Example", everything())
+
+occ %>% knitr::kable()
+
+```
 :::
+
+## Examples of DwC Terms
+
+::: {style="font-size: 50%; text-align: left"}
+```{r}
+#| label: tbl-occurrences1
+#| tbl-cap: Example Occurrence Data From [Silliman et al., 2023](https://obis.org/dataset/210efc7c-4762-47ee-b4b5-22a0f436ef44)
+
+#Make table of Gomecc data
+
+#make rds from download
+#df <- robis::occurrence(datasetid = "210efc7c-4762-47ee-b4b5-22a0f436ef44", extensions = "DNADerivedData")
+#saveRDS(df, file = "obis_210efc7c-4762-47ee-b4b5-22a0f436ef44.rds")
+
+df <- readRDS("obis_210efc7c-4762-47ee-b4b5-22a0f436ef44.rds")
+
+occ <- df %>% 
+  group_by(scientificNameID) %>% 
+  slice(2) %>% 
+  filter(scientificNameID %in% c("urn:lsid:marinespecies.org:taxname:233015")) %>% 
+  select(occurrenceID,
+         basisOfRecord,
+         organismQuantity,
+         organismQuantityType,
+         sampleSizeValue,
+         sampleSizeUnit,
+         associatedSequences,
+         identificationRemarks,
+         verbatimIdentification,
+         scientificName,
+         scientificNameID
+         ) %>% 
+  tidyr::gather(key = "Term", value = "Example", everything())
+
+occ %>% knitr::kable()
+```
+:::
+
+## Examples of DwC Terms
+
+::: {style="font-size: 50%; text-align: left"}
+```{r}
+#| label: tbl-occurrences2
+#| tbl-cap: Example Occurrence Data (ambiguous taxonomy) From [Silliman et al., 2023](https://obis.org/dataset/210efc7c-4762-47ee-b4b5-22a0f436ef44)
+
+#Make table of Gomecc data
+
+#make rds from download
+#df <- robis::occurrence(datasetid = "210efc7c-4762-47ee-b4b5-22a0f436ef44", extensions = "DNADerivedData")
+#saveRDS(df, file = "obis_210efc7c-4762-47ee-b4b5-22a0f436ef44.rds")
+
+df <- readRDS("obis_210efc7c-4762-47ee-b4b5-22a0f436ef44.rds")
+
+occ <- df %>% 
+  group_by(scientificNameID) %>% 
+  slice(2) %>% 
+  filter(scientificNameID %in% c("urn:lsid:marinespecies.org:taxname:12")) %>% 
+  select(occurrenceID,
+         basisOfRecord,
+         organismQuantity,
+         organismQuantityType,
+         sampleSizeValue,
+         sampleSizeUnit,
+         associatedSequences,
+         identificationRemarks,
+         verbatimIdentification,
+         scientificName,
+         scientificNameID
+         ) %>% 
+  tidyr::gather(key = "Term", value = "Example", everything())
+
+occ %>% knitr::kable()
+```
+:::
+
+## Examples of DwC Terms
+
+::: {style="font-size: 50%; text-align: left"}
+```{r}
+#| label: tbl-dna1
+#| tbl-cap: Example Occurrence Data From [Silliman et al., 2023](https://obis.org/dataset/210efc7c-4762-47ee-b4b5-22a0f436ef44)
+
+#Make table of Gomecc data
+
+#make rds from download
+#df <- robis::occurrence(datasetid = "210efc7c-4762-47ee-b4b5-22a0f436ef44", extensions = "DNADerivedData")
+#saveRDS(df, file = "obis_210efc7c-4762-47ee-b4b5-22a0f436ef44.rds")
+
+df <- readRDS("obis_210efc7c-4762-47ee-b4b5-22a0f436ef44.rds")
+
+occID <- df %>% 
+  group_by(scientificNameID) %>% 
+  slice(2) %>% 
+  filter(scientificNameID %in% c("urn:lsid:marinespecies.org:taxname:233015")) %>% 
+  pull(occurrenceID)
+
+occ <- df %>% 
+  group_by(scientificNameID) %>% 
+  slice(2) %>% 
+  filter(scientificNameID %in% c("urn:lsid:marinespecies.org:taxname:233015")) %>% 
+  robis::dna_records() %>% 
+  mutate(occurrenceID = occID) %>% 
+  select(occurrenceID,
+         DNA_sequence,
+         concentration,
+         target_gene,
+         target_subfragment,
+         pcr_primer_forward,
+         pcr_primer_reverse,
+         pcr_primer_name_forward,
+         pcr_primer_name_reverse,
+         pcr_primer_reference,
+         seq_meth,
+         otu_class_appr,
+         otu_db,
+         otu_seq_comp_appr
+         ) %>% 
+  tidyr::gather(key = "Term", value = "Example", everything())
+
+occ %>% knitr::kable()
+```
+:::
+
+::: {#title-slide .center}
+You don't have to use OBIS/GBIF.
+:::
+
+## So, why use GBIF and OBIS?
+
+Off-the-shelf platforms for publishing and tracking use of biological occurrence data with minimal financial or staffing investment.
+
+![](images/mountain_of_FAIR.png)
+
+## Thank you! {.center}
+
+Compliments? Complaints? Ideas?
+
+[sformel\@usgs.gov](sformel@usgs.gov)

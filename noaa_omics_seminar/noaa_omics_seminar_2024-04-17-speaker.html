@@ -323,6 +323,9 @@
       margin-right: 0; 
     }
   </style>
+  <script src="noaa_omics_seminar_2024-04-17_files/libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="noaa_omics_seminar_2024-04-17_files/libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="noaa_omics_seminar_2024-04-17_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
   <link rel="stylesheet" href="/assets/fontawesome-free-6.1.1-web/css/font-awesome.min.css">
   <script defer="" src="/assets/fontawesome-free-6.1.1-web/js/all.min.js"></script>
 </head>
@@ -520,10 +523,10 @@ Stephen Formel <a href="https://orcid.org/0000-0001-7418-1244" class="quarto-tit
 <div style="font-size: 75%; text-align: center">
 <div class="columns v-center-container">
 <div class="column" style="width:50%;">
-<p><img data-src="images/GBIF-Full-logo/PNG/gbif-full-logo-green%20-%20whitespace_cropped.png" data-fig-align="center" alt="GBIF Logo"> Occurrence Records: 2,689,330,500</p>
-<p>Datasets: 104,057</p>
+<p><img data-src="images/GBIF-Full-logo/PNG/gbif-full-logo-green%20-%20whitespace_cropped.png" data-fig-align="center" alt="GBIF Logo"> Occurrence Records: 2,689,010,988</p>
+<p>Datasets: 104,086</p>
 <p>Publishers: 2,720</p>
-<p>Papers: 10,371</p>
+<p>Papers: 10,394</p>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -566,7 +569,7 @@ Stephen Formel <a href="https://orcid.org/0000-0001-7418-1244" class="quarto-tit
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/67725_image_access_800/1_06_10_022012_image_access_800.jpg" alt="https://ark.digitalcommonwealth.org/ark:/50959/r781wg156" height="300"></p>
-<figcaption><em>Sparkly fountains need robust plumbing systems. <br>- Terry McConnell (International Digital Twins of the Ocean Summit 2022)</em></figcaption>
+<figcaption><em>Sparkly fountains need robust plumbing systems.</em> <br>- Terry McConnell (International Digital Twins of the Ocean Summit 2022)</figcaption>
 </figure>
 </div>
 </div><div class="column" style="width:50%;">
@@ -633,11 +636,517 @@ Stephen Formel <a href="https://orcid.org/0000-0001-7418-1244" class="quarto-tit
 </div>
 </div>
 </div>
+</section>
+<section id="important-differences" class="slide level2">
+<h2>Important Differences</h2>
+<div class="callout callout-note no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<div class="columns">
+<div class="column" style="width:10%;">
+<p><iconify-icon inline="" icon="openmoji:jellyfish" style="font-size: 3em;" aria-label="Icon jellyfish from openmoji Iconify.design set." title="Icon jellyfish from openmoji Iconify.design set."></iconify-icon></p>
+</div><div class="column" style="width:90%;">
+<p>GBIF has a global scope. OBIS includes marine occurrences only.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<div class="columns">
+<div class="column" style="width:10%;">
+<p><iconify-icon inline="" icon="openmoji:money-bag" style="font-size: 3em;" aria-label="Icon money-bag from openmoji Iconify.design set." title="Icon money-bag from openmoji Iconify.design set."></iconify-icon></p>
+</div><div class="column" style="width:90%;">
+<p>GBIF is funded by individual participant countries. We fund GBIF-US through the NSF. OBIS is funded by UNESCO, an agency of the United Nations.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<div class="columns">
+<div class="column" style="width:10%;">
+<p><iconify-icon inline="" icon="openmoji:yin-yang" style="font-size: 3em;" aria-label="Icon yin-yang from openmoji Iconify.design set." title="Icon yin-yang from openmoji Iconify.design set."></iconify-icon></p>
+</div><div class="column" style="width:90%;">
+<p>GBIF-US and OBIS-USA are unusual in that both nodes are managed by the same people.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="how-does-it-work" class="slide level2">
+<h2>How does it work?</h2>
+
+<img data-src="/images/gbif_workflow.png" class="r-stretch"><div style="font-size: 75%; text-align: left">
+<p>This is an illustration of the GBIF workflow. The OBIS workflow is similar.</p>
+</div>
+</section>
+<section id="what-do-gbif-and-obis-do-well" class="slide level2">
+<h2>What do GBIF and OBIS do well?</h2>
+<ul>
+<li>Coordinate and serve interoperable observations of biological occurrence</li>
+<li>Promote and catalyze progress for open science and FAIR data</li>
+<li>Searching data at the occurrence level</li>
+<li>Track data use and <a href="https://www.gbif.org/literature-tracking">citations</a></li>
+<li>Well designed tools and guidance exist for self-publishing</li>
+<li>Active and diverse community</li>
+</ul>
+</section>
+<section id="so-why-use-gbif-and-obis" class="slide level2">
+<h2>So, why use GBIF and OBIS?</h2>
+<p>Off-the-shelf platforms for publishing and tracking use of biological occurrence data with minimal financial or staffing investment. USGS, and SpringerNature, accept GBIF as an archival repository, publishing to OBIS-USA satisfies NOAA archiving requirements.</p>
+
+<img data-src="images/mountain_of_FAIR.png" class="r-stretch"></section>
+<section id="sustainablity---international" class="slide level2">
+<h2>Sustainablity - International</h2>
+<div class="callout callout-note no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<p>Both organizations rely on regular international investment for funding.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<p>OBIS recently transitioned from a project to a program, which means it now receives core UNESCO/IOC funding and staff support to enable the activity to operate on a permanent basis.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<p>Open standards and science means that migration of data would be relatively simple in the event of a surprise shutdown.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="sustainablity---us" class="slide level2">
+<h2>Sustainablity - US</h2>
+<div class="callout callout-note no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<p>GBIF-US is funded by NSF (~ $600k / year). There is a [US Delegation](https://www.gbif.us/community/) that guides GBIF for US interests.</p>
+<p>OBIS-USA is funded through US participation in UN and UNESCO.</p>
+<p>For operation of both nodes, USGS funds the node staff salary + travel. NOAA IOOS also contributes staff.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<p>Both IPTs could easily transition to other management and continue to operate without US funding</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<p>Both secretariats have funding and training in place for new nodes and node managers</p>
+</div>
+</div>
+</div>
+</section>
+<section id="things-in-development" class="slide level2">
+<h2>Things in Development</h2>
+<ul>
+<li><p>Taxonomic alignment</p></li>
+<li><p>Facilitating round tripping of data, taxonomic updates</p></li>
+<li><p>Sequence searches</p></li>
+<li><p><a href="https://edna-tool.gbif-uat.org/">eDNA publishing tools</a> for non-technical / small-to-medium publishers</p></li>
+<li><p>Expansion of US node staff</p></li>
+</ul>
+</section>
+<section id="publishing-edna-data" class="title-slide slide level1 center">
+<h1>Publishing eDNA Data</h1>
+
+</section>
+
+<section>
+<section id="the-dnaderiveddata-extension" class="title-slide slide level1 smaller center">
+<h1>The DNADerivedData extension</h1>
+<p>The <a href="https://rs.gbif.org/extension/gbif/1.0/dna_derived_data_2022-02-23.xml">DNADerivedData extension</a> was created to extend occurrence data with sequencing related metadata.</p>
+<p>It mostly consists of terms from the GGBN Data Standard, GSC MIxS (Minimum Information about any (X) Sequence), and MIQE (The Minimum Information for Publication of Quantitative Real-Time PCR Experiments). <br></p>
+<p>Guidelines for using the extension and publishing DNA-derived data in general are available at <a href="https://docs.gbif.org/publishing-dna-derived-data/en/">Publishing DNA-derived data through biodiversity data platforms</a>. The guide handles metabarcoding and metagenomics, which are sequence derived, and qPCR/ddPCR data which are not sequence derived.</p>
+
+<img data-src="images/dna_guide.png" class="r-stretch quarto-figure-center"></section>
+<section id="dna-derived-data" class="slide level2">
+<h2>DNA-Derived Data</h2>
+
+<img data-src="https://docs.gbif.org/publishing-dna-derived-data/img/web/sampling-processes.en.svg" class="r-stretch quarto-figure-center"><p class="caption">https://docs.gbif.org/publishing-dna-derived-data/img/web/sampling-processes.en.svg</p></section>
+<section id="the-darwin-core-archive-dwc-a" class="slide level2">
+<h2>The Darwin Core Archive (DwC-A)</h2>
+
+<img data-src="https://manual.obis.org/images/dwca.png" class="r-stretch quarto-figure-center"><p class="caption">https://manual.obis.org/images/dwca.png</p><div class="cell" data-reveal="true">
+<div class="cell-output-display">
+<div>
+<div>
+
+<pre class="mermaid mermaid-js">flowchart LR
+    DwC-A
+    subgraph tables
+    Core([Occurrence Core])
+    Ext([DNA Derived Data Extension]) --&gt; Core
+    end
+    MD([Ecological Metadata Language])
+
+  
+  
+</pre>
+</div>
+</div>
+</div>
+</div>
+<p>:::</p>
+</section>
+<section id="processing-workflow" class="slide level2">
+<h2>Processing workflow</h2>
+<p><img data-src="https://docs.gbif.org/publishing-dna-derived-data/img/web/outline-of-bioinformatic-processing.en.svg"> From https://docs.gbif.org/publishing-dna-derived-data/en/</p>
+</section>
+<section id="data-mapping" class="slide level2">
+<h2>Data mapping</h2>
+<p>See <a href="https://docs.gbif.org/publishing-dna-derived-data/en/#mapping-metabarcoding-edna-and-barcoding-data">Mapping (meta)barcoding data</a> and <a href="https://docs.gbif.org/publishing-dna-derived-data/en/#mapping-ddpcr-qpcr-data">Mapping qPCR/ddPCR data</a>.</p>
+</section>
+<section id="obis-specificities" class="slide level2 smaller">
+<h2>OBIS specificities</h2>
+<p><strong>Unclassified sequences</strong> For OBIS we recommend that unclassified sequences are annotated as <code>scientificName</code> = <code>incertae sedis</code> and <code>scientificNameID</code> = <code>urn:lsid:marinespecies.org:taxname:12</code>. This will ensure correct interpretation by both GBIF and OBIS.</p>
+<p>Additionally, it is recommended that sequence identifiers from the used reference databases (e.g.&nbsp;Barcode index numbers: BINs from BOLD) be added in the <code>taxonConceptID</code> field of the occurrence core table. In this way OBIS will retain its taxonomic backbone based on WoRMS, while enabling linking to disparate reference sequence databases. Names from reference databases which are not strictly scientific names, can be added as verbatimIdentification.</p>
+</section>
+<section id="examples-from-silliman-et-al.-2023" class="slide level2">
+<h2>Examples from <a href="https://obis.org/dataset/210efc7c-4762-47ee-b4b5-22a0f436ef44">Silliman et al., 2023</a></h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure>
+<p><a href="https://www.gbif.org/dataset/9012def0-bd87-48a0-ac9e-e0e78dd37689"><img data-src="images/silliman_gbif_landing_page.PNG" alt="GBIF Landing Page" width="400"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure>
+<p><a href="https://obis.org/dataset/210efc7c-4762-47ee-b4b5-22a0f436ef44"><img data-src="images/silliman_obis_landing_page.PNG" alt="OBIS Landing Page" width="400"></a></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure>
+<p><a href="https://www.gbif.org/dataset/9012def0-bd87-48a0-ac9e-e0e78dd37689"><img data-src="images/qrcode_www.gbif.org.png" width="150"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure>
+<p><a href="https://obis.org/dataset/210efc7c-4762-47ee-b4b5-22a0f436ef44"><img data-src="images/qrcode_obis.org.png" width="150"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="examples-of-dwc-terms" class="slide level2">
+<h2>Examples of DwC Terms</h2>
+<div style="font-size: 50%; text-align: left">
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-basics">
+<table>
+<caption>Table&nbsp;1: Example Occurrence Data From <a href="https://obis.org/dataset/210efc7c-4762-47ee-b4b5-22a0f436ef44">Silliman et al., 2023</a></caption>
+<colgroup>
+<col style="width: 23%">
+<col style="width: 76%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Term</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">occurrenceID</td>
+<td style="text-align: left;">GOMECC4_PANAMACITY_Sta21_DCM_A_occ7c8b2f5e16137114160dfd4001f67550</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">eventDate</td>
+<td style="text-align: left;">2021-09-20T18:04-04:00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">locality</td>
+<td style="text-align: left;">USA: Gulf of Mexico</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">locationID</td>
+<td style="text-align: left;">PANAMACITY_Sta21</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">decimalLatitude</td>
+<td style="text-align: left;">29.206</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">decimalLongitude</td>
+<td style="text-align: left;">-85.647</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">geodeticDatum</td>
+<td style="text-align: left;">WGS84</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">minimumDepthInMeters</td>
+<td style="text-align: left;">39</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">maximumDepthInMeters</td>
+<td style="text-align: left;">39</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="examples-of-dwc-terms-1" class="slide level2">
+<h2>Examples of DwC Terms</h2>
+<div style="font-size: 50%; text-align: left">
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-occurrences1">
+<table>
+<caption>Table&nbsp;2: Example Occurrence Data From <a href="https://obis.org/dataset/210efc7c-4762-47ee-b4b5-22a0f436ef44">Silliman et al., 2023</a></caption>
+<colgroup>
+<col style="width: 5%">
+<col style="width: 94%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Term</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">occurrenceID</td>
+<td style="text-align: left;">GOMECC4_PANAMACITY_Sta21_DCM_A_occ7c8b2f5e16137114160dfd4001f67550</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">basisOfRecord</td>
+<td style="text-align: left;">MaterialSample</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">organismQuantity</td>
+<td style="text-align: left;">35</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">organismQuantityType</td>
+<td style="text-align: left;">DNA sequence reads</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">sampleSizeValue</td>
+<td style="text-align: left;">12436</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">sampleSizeUnit</td>
+<td style="text-align: left;">DNA sequence reads</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">associatedSequences</td>
+<td style="text-align: left;">https://www.ncbi.nlm.nih.gov/sra/SRR26161072 | https://www.ncbi.nlm.nih.gov/biosample/SAMN37516159 | https://www.ncbi.nlm.nih.gov/bioproject/PRJNA887898</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">identificationRemarks</td>
+<td style="text-align: left;">Tourmaline; qiime2-2021.2; naive-bayes classifier, confidence (at lowest specified taxon): 0.966508279, against reference database: PR2 v5.0.1; V9 1391f-1510r region; 10.5281/zenodo.8392706. The PR2 database used for taxonomic assignment is primarily curated for protists, and may not accurately resolve metazoa, land plants or macrosporic fungi to lower taxonomic levels.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">verbatimIdentification</td>
+<td style="text-align: left;">Karenia brevis</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">scientificName</td>
+<td style="text-align: left;">Karenia brevis</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">scientificNameID</td>
+<td style="text-align: left;">urn:lsid:marinespecies.org:taxname:233015</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="examples-of-dwc-terms-2" class="slide level2">
+<h2>Examples of DwC Terms</h2>
+<div style="font-size: 50%; text-align: left">
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-occurrences2">
+<table>
+<caption>Table&nbsp;3: Example Occurrence Data (ambiguous taxonomy) From <a href="https://obis.org/dataset/210efc7c-4762-47ee-b4b5-22a0f436ef44">Silliman et al., 2023</a></caption>
+<colgroup>
+<col style="width: 5%">
+<col style="width: 94%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Term</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">occurrenceID</td>
+<td style="text-align: left;">GOMECC4_YUCATAN_Sta100_Surface_B_occ1f111363da96fee3d180ddb12741d4ce</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">basisOfRecord</td>
+<td style="text-align: left;">MaterialSample</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">organismQuantity</td>
+<td style="text-align: left;">18</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">organismQuantityType</td>
+<td style="text-align: left;">DNA sequence reads</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">sampleSizeValue</td>
+<td style="text-align: left;">12151</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">sampleSizeUnit</td>
+<td style="text-align: left;">DNA sequence reads</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">associatedSequences</td>
+<td style="text-align: left;">https://www.ncbi.nlm.nih.gov/sra/SRR26160967 | https://www.ncbi.nlm.nih.gov/biosample/SAMN37516435 | https://www.ncbi.nlm.nih.gov/bioproject/PRJNA887898</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">identificationRemarks</td>
+<td style="text-align: left;">Tourmaline; qiime2-2021.2; naive-bayes classifier, confidence (at lowest specified taxon): 0.960018364, against reference database: PR2 v5.0.1; V9 1391f-1510r region; 10.5281/zenodo.8392706. The PR2 database used for taxonomic assignment is primarily curated for protists, and may not accurately resolve metazoa, land plants or macrosporic fungi to lower taxonomic levels.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">verbatimIdentification</td>
+<td style="text-align: left;">Unassigned</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">scientificName</td>
+<td style="text-align: left;">Biota incertae sedis</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">scientificNameID</td>
+<td style="text-align: left;">urn:lsid:marinespecies.org:taxname:12</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="examples-of-dwc-terms-3" class="slide level2">
+<h2>Examples of DwC Terms</h2>
+<div style="font-size: 50%; text-align: left">
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-dna1">
+<table>
+<caption>Table&nbsp;4: Example Occurrence Data From <a href="https://obis.org/dataset/210efc7c-4762-47ee-b4b5-22a0f436ef44">Silliman et al., 2023</a></caption>
+<colgroup>
+<col style="width: 15%">
+<col style="width: 84%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Term</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">occurrenceID</td>
+<td style="text-align: left;">GOMECC4_PANAMACITY_Sta21_DCM_A_occ7c8b2f5e16137114160dfd4001f67550</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DNA_sequence</td>
+<td style="text-align: left;">GCTCCTACCGATTGAGTGATCCGGTGAATAATTCGGACTGCCGCAGTGTTCAGATCCTGAACGTTGCAGTGGAAAGTTTAGTGAACCTTATCACTTAGAGGAAGGAGAAGTCGTAACAAGGTTTCC</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">concentration</td>
+<td style="text-align: left;">1.177</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">target_gene</td>
+<td style="text-align: left;">18S rRNA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">target_subfragment</td>
+<td style="text-align: left;">V9</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pcr_primer_forward</td>
+<td style="text-align: left;">GTACACACCGCCCGTC</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">pcr_primer_reverse</td>
+<td style="text-align: left;">TGATCCTTCTGCAGGTTCACCTAC</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pcr_primer_name_forward</td>
+<td style="text-align: left;">1391f</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">pcr_primer_name_reverse</td>
+<td style="text-align: left;">EukBr</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pcr_primer_reference</td>
+<td style="text-align: left;">10.1371/journal.pone.0006372</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">seq_meth</td>
+<td style="text-align: left;">Illumina MiSeq 2x250</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">otu_class_appr</td>
+<td style="text-align: left;">Tourmaline; qiime2-2021.2; dada2; ASV</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">otu_db</td>
+<td style="text-align: left;">PR2 v5.0.1; V9 1391f-1510r region; 10.5281/zenodo.8392706</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">otu_seq_comp_appr</td>
+<td style="text-align: left;">Tourmaline; qiime2-2021.2; naive-bayes classifier</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="title-slide" class="center">
+<p>You don’t have to use OBIS/GBIF.</p>
+</div>
+</section>
+<section id="so-why-use-gbif-and-obis-1" class="slide level2">
+<h2>So, why use GBIF and OBIS?</h2>
+<p>Off-the-shelf platforms for publishing and tracking use of biological occurrence data with minimal financial or staffing investment.</p>
+
+<img data-src="images/mountain_of_FAIR.png" class="r-stretch"></section>
+<section id="thank-you" class="slide level2 center">
+<h2>Thank you!</h2>
+<p>Compliments? Complaints? Ideas?</p>
+<p><a href="sformel@usgs.gov">sformel@usgs.gov</a></p>
 
 <img src="images/USGS_ID_green.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p>presented as a NOAA Omics Seminar 2024-04-17</p>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
