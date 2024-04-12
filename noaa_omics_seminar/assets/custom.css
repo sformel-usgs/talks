@@ -30,6 +30,11 @@
     ***/
 }
 
+
+.footer {
+  font-size: 12px!important;
+}
+
 .v-center-container {
   display: flex;
   justify-content: center;

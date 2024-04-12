@@ -93,10 +93,8 @@ execute:
 
 ## What are GBIF and OBIS?
 
-:::: {.columns .v-center-container}
-
+::: {.columns .v-center-container}
 ::: {.column width="10%"}
-
 {{< iconify icon-park international size=3x >}}
 
 <br>
@@ -106,13 +104,9 @@ execute:
 <br>
 
 {{< iconify pepicons-print people-circle size=3x >}}
-
-
-
 :::
 
 ::: {.column width="90%"}
-
 GBIF and OBIS are international initiatives that aim to provide open access to biodiversity occurrence data.
 
 <br>
@@ -121,10 +115,8 @@ Although they are most well-known for their publishing platforms, and their role
 
 <br>
 
-...both initiatives represent an investment from the international political community and a vibrant scientific community  of nodes, publishers, and users of standards and practices.
-
+...both initiatives represent an investment from the international political community and a vibrant scientific community of nodes, publishers, and users of standards and practices.
 :::
-
 :::
 
 ## What are GBIF and OBIS?
@@ -183,23 +175,18 @@ obis_taxa_ct <- stats %>%
 ```
 
 ::: {style="font-size: 75%; text-align: center"}
-:::: {.columns .v-center-container}
-
+::: {.columns .v-center-container}
 ::: {.column width="50%"}
-![](images/GBIF-Full-logo/PNG/gbif-full-logo-green - whitespace_cropped.png){fig-alt="GBIF Logo" fig-align="center"}
-Occurrence Records: `r gbif_occ_ct`
+![](images/GBIF-Full-logo/PNG/gbif-full-logo-green%20-%20whitespace_cropped.png){fig-alt="GBIF Logo" fig-align="center"} Occurrence Records: `r gbif_occ_ct`
 
 Datasets: `r gbif_dataset_ct`
 
 Publishers: `r gbif_publisher_ct`
 
 Papers: `r gbif_paper_ct`
-
 :::
 
 ::: {.column width="50%"}
-
-
 ![](images/logoOBIS_namechange_horizontal.png){fig-alt="OBIS Logo" fig-align="center"}
 
 Occurrence Records: `r obis_occ_ct`
@@ -207,6 +194,168 @@ Occurrence Records: `r obis_occ_ct`
 Datasets: `r obis_dataset_ct`
 
 Taxa: `r obis_taxa_ct`
+:::
+:::
+:::
+
+## What are GBIF and OBIS?
+
+::: {style="font-size: 50%; text-align: center"}
+Map of the GBIF and OBIS networks. Countries where there is at least one GBIF node are in blue. Yellow points represent OBIS nodes.
+:::
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-align: center
+#| out-width: "100%"
+#| fig-alt: Map of the GBIF and OBIS networks.  Countries where there is at least one GBIF node are in blue.  Yellow points represent OBIS nodes.
+
+# Generate Map of GBIF and OBIS nodes
+
+library(dplyr)
+library(rgbif)
+library(robis)
+library(ggplot2)
+
+gbif_nodes <- rgbif::nodes(limit = 1000) %>% 
+  .[["data"]] %>% 
+  select(title, country)
+
+obis_nodes <- robis::node() %>% 
+  select(name, lon,lat) %>% 
+  sf::st_as_sf(coords = c("lon", "lat"), crs = 4326)
+  
+countries <- rnaturalearth::ne_countries(returnclass = "sf")
+
+
+ggplot(data = countries) +
+  geom_sf(aes(fill = postal %in% gbif_nodes$country)) +
+  geom_sf(
+    data = obis_nodes,
+    inherit.aes = FALSE,
+    color = "black",
+    fill = "#F0E442",
+    shape = 21,
+    size = 4
+  ) +
+  theme_classic() +
+  theme(legend.position = "None") +
+  coord_sf(xlim = c(-180, 180),
+           ylim = c(-90, 90)) +
+  scale_fill_manual(values = c("grey", "#56B4E9"))
+
+```
+
+## What are GBIF-US and OBIS-USA?
+
+![](images/USGS_ID_green.png){height="75"} ![](images/IOOS_Emblem_Primary_B_RGB.jpg){height="75"} ![](images/NSF_Official_logo_High_Res_1200ppi.png){height="100"}
+
+::: {style="font-size: 75%; text-align: left"}
+USGS-SAS Biogeographic Science Branch manages the US nodes: GBIF-US and OBIS-USA.
+
+-   represent US interests in the international initiatives
+-   advise the US scientific community on biodiversity informatics, data, and standards
+-   mobilize and synthesize data to enhance its FAIRness and relevance on national and international scales.
+:::
+
+## Why do we work with GBIF and OBIS?
+
+::: {.callout-note appearance="simple" icon=false}
+
+::: {.columns .v-center-container}
+
+::: {.column width="50%"}
+
+![*Sparkly fountains need robust plumbing systems. <br>- Terry McConnell \(International Digital Twins of the Ocean Summit 2022\)*](images/67725_image_access_800/1_06_10_022012_image_access_800.jpg){fig-alt="https://ark.digitalcommonwealth.org/ark:/50959/r781wg156" height=300}
+:::
+
+::: {.column width="50%"}
+
+The US has been a voting participant in GBIF since 2001 and became an OBIS-USA node in 2005. 
+
+<br>
+
+The USGS is shepherding over two decades of investment in the robust plumbing needed for national and global biodiversity science and data.
+
+:::
+
+:::
+
+:::
+
+## How are GBIF and OBIS the same?
+
+::: {.callout-note appearance="simple" icon=false}
+
+::: {.columns}
+::: {.column width="10%"}
+
+{{< iconify openmoji whale size=3x >}}
+
+:::
+
+::: {.column width="90%"}
+
+Both are active and energetic communities that develop, maintain, and promote standards and practices for biodiversity science and have been doing so for > 20 years
+
+:::
+
+:::
+
+:::
+
+::: {.callout-note appearance="simple" icon=false}
+
+::: {.columns}
+::: {.column width="10%"}
+
+{{< iconify openmoji unlocked size=3x >}}
+
+:::
+
+::: {.column width="90%"}
+
+Both promote open data and science, and publish massive amounts of standardized biological observations through their platforms
+
+:::
+
+:::
+
+:::
+
+::: {.callout-note appearance="simple" icon=false}
+
+::: {.columns}
+::: {.column width="10%"}
+
+{{< iconify openmoji handshake-medium-dark-skin-tone-medium-skin-tone size=3x >}}
+
+:::
+
+::: {.column width="90%"}
+
+Have signed a [letter of agreement](https://www.gbif.org/news/6M8YYYirX3bK57bHaIpd0U/ocean-biodiversity-information-system-and-gbif-update-and-expand-cooperation-agreement) in recognition that their respective communities will benefit from more streamlined ways of working together.  A stronger action plan is forthcoming.
+
+:::
+
+:::
+
+:::
+
+::: {.callout-note appearance="simple" icon=false}
+
+::: {.columns}
+::: {.column width="10%"}
+
+{{< iconify openmoji clipboard size=3x >}}
+
+:::
+
+::: {.column width="90%"}
+
+GBIF and OBIS are built on the same data and metadata standards, and share open-source tools
 
 :::
 
