@@ -11,14 +11,3 @@ $link-color: #027eb6;
   padding-left: 0.5em;
 }
 
-/*-- scss:rules --*/
-
-.reveal {
-  .slides {
-    .slide {
-      img+p.caption {
-        font-size: 0.5em;
-      }
-    }
-  }
-}
